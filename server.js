@@ -11,11 +11,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 app.use(routes);
-// app.use(
-//   session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
-// );
-// app.use(passport.initialize());
-// app.use(passport.session());
 
 app.get("/home", function (req, res) {
   res.send("Home");
