@@ -2,6 +2,7 @@ var express = require("express");
 var session = require("express-session");
 const mongoose = require("mongoose");
 const routes = require("./routes");
+// import app
 
 var PORT = process.env.PORT || 8080;
 var db = require("./models");
@@ -11,7 +12,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 app.use(routes);
-
 app.get("/home", function (req, res) {
   res.send("Home");
 });
