@@ -54,8 +54,4 @@ router.post("/search", (req, res) => {
 
 module.exports = router;
 
-// url for 8
-// get token to make request to URL
-// request to URL we want
-
 // routers to controller to get db info
