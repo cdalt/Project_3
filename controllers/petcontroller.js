@@ -1,5 +1,5 @@
 const db = require("../models");
-// organizes code makes easier to read
+
 module.exports = {
   findAll: function (req, res) {
     db.Pet.find(req.query)
