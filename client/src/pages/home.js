@@ -7,7 +7,7 @@ function home() {
           className="hero text-center"
           style={{
             height: "50vh",
-            backgroundImage: `url(${process.env.PUBLIC_URL + "/coding.jpg"})`,
+            backgroundImage: `url(${process.env.PUBLIC_URL + "/petlogo.png"})`,
           }}
         >
           <h1>Pet Finder</h1>
