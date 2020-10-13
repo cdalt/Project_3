@@ -1,10 +1,11 @@
 import React from 'react';
-import Form from './components/Form/form';
+import SignUp from './pages/SignUp';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div>
-      <Form />
+      <SignUp />
     </div>
   );
 }
