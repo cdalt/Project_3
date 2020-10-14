@@ -23,9 +23,8 @@ function about() {
           <div className="row">
             <div className="col col-md-6">
               <p>
-                Welcome to our page! We hope that we are able to help
-                you find your future pet all while saving an animal
-                from a shelter and taking them off the streets.
+                We hope you like out page, this was made by: 
+                Dalton, Alfredo, Blake, and Jeremy. 
               </p>
             </div>
             <div className="col col-md-6">
