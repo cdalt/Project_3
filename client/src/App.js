@@ -8,7 +8,6 @@ import SignUp from "./components/SignUp/signup.component";
 
 function App() {
   return (<Router>
-    
       <Navbar bg="primary" variant="dark">
           <Link className="navbar-brand" to={"/sign-in"}>Petfinder</Link>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">

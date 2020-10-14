@@ -6,7 +6,7 @@ export default class SignUp extends Component {
       <form>
         <h3>Sign Up</h3>
         <a href="http://localhost:8080/auth/google">Sign up with Google</a>
-        {/* <div className="form-group">
+        <div className="form-group">
                     <label>First name</label>
                     <input type="text" className="form-control" placeholder="First name" />
                 </div>
@@ -24,7 +24,7 @@ export default class SignUp extends Component {
                 <div className="form-group">
                     <label>Password</label>
                     <input type="password" className="form-control" placeholder="Enter password" />
-                </div> */}
+                </div>
 
         <button type="submit" className="btn btn-primary btn-block">
           Sign Up

@@ -1,13 +1,23 @@
 import React, { Component } from "react";
-import axios from "axios";
 
 export default class Login extends Component {
-  state = {
+  constructor(props) {
+    super(props)
+  this.state = {
     email: "",
     password: "",
   };
+  this.handleInputChange = this.handleInputChange.bind(this);
+  this.handleSubmit = this.handleSubmit.bind(this);
+};
+  handleInputChange(event) {
+    const target = event.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name;
+  };
   handleSubmit(event) {
     console.log("clicked");
+    alert('submitted: ' + this.state.value);
     event.preventDefault();
   }
   render() {
@@ -19,6 +29,7 @@ export default class Login extends Component {
           <label>Email address</label>
           <input
             value={this.state.email}
+            onChange={this.handleInputChange}
             type="email"
             className="form-control"
             placeholder="Enter email"
@@ -29,6 +40,7 @@ export default class Login extends Component {
           <label>Password</label>
           <input
             value={this.state.password}
+            onChange={this.handleInputChange}
             type="password"
             className="form-control"
             placeholder="Enter password"
