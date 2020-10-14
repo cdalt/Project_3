@@ -59,5 +59,5 @@ export default class Login extends Component {
           Forgot <a href="#">password?</a>
         </p>
       </form>
-    );
-  }
+    )}
+    ;
