@@ -10,6 +10,7 @@ const {
   findById,
   remove,
 } = require("../controllers/petcontroller");
+const userControllers = require("../controllers/user.js");
 
 router.get("/pets", findAll);
 router.post("/pets", create);
@@ -51,6 +52,10 @@ router.post("/search", (req, res) => {
   };
   fetchAccessToken();
 });
+
+router.get("/users/:id", userControllers.findById);
+router.post("/users", userControllers.create);
+router.put("/users/:id", userControllers.update);
 
 module.exports = router;
 
