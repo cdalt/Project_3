@@ -17,7 +17,7 @@ router.route("/").get(function (req, res, next) {
 router.get(
   "/auth/google",
   passport.authenticate("google", {
-    scope: ["https://www.googleapis.com/auth/plus.login"],
+    scope: ["https://www.googleapis.com/auth/userinfo.email"],
   })
 );
 
