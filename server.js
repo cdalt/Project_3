@@ -2,16 +2,15 @@ var express = require("express");
 var session = require("express-session");
 const mongoose = require("mongoose");
 const routes = require("./routes");
-<<<<<<< HEAD
-var petfinder = require("petfinder")("dopxNWoL1qIkAqCzoXTOzZArtktlomUQ1xvzT4NYCby1iFprex","UHkUItDczoXrrwvZtZTNvmpWYMqs9iKjBDcg7JYV");
-=======
-// import app
+var petfinder = require("petfinder")(
+  "dopxNWoL1qIkAqCzoXTOzZArtktlomUQ1xvzT4NYCby1iFprex",
+  "UHkUItDczoXrrwvZtZTNvmpWYMqs9iKjBDcg7JYV"
+);
 
->>>>>>> 034c03f1778852b25115bbcd379f8063992e346b
 var PORT = process.env.PORT || 8080;
 var db = require("./models");
-petfinder.getBreedList('cat', function(err, breeds) {
-  console.log(breeds)
+petfinder.getBreedList("cat", function (err, breeds) {
+  console.log(breeds);
 });
 var app = express();
 app.use(express.urlencoded({ extended: true }));
