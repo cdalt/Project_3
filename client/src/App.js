@@ -6,6 +6,9 @@ import {Navbar} from 'react-bootstrap'
 import Login from "./components/Login/login.component";
 import SignUp from "./components/SignUp/signup.component";
 
+import home from "./pages/home";
+import about from "./pages/about";
+
 function App() {
   return (<Router>
     
@@ -47,4 +50,13 @@ function App() {
 
 
 
+
+
+
+
+
 export default App;
+
+
+
+//lines 9 and 10
