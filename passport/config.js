@@ -12,7 +12,7 @@ passport.use(
     {
       clientID: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET,
-      callbackURL: "http://localhost:8080/auth/google/callback",
+      callbackURL: "http://localhost:3000/",
     },
     function (accessToken, refreshToken, profile, done) {
       //check user table for anyone with a facebook ID of profile.id
