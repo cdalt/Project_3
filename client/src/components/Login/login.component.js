@@ -19,7 +19,7 @@ export default class Login extends Component {
   };
   handleSubmit(event) {
     console.log("clicked");
-    alert('submitted: ' + this.state.target);
+    alert('submitted: ' + event.target.value);
     event.preventDefault();
   }
   render() {

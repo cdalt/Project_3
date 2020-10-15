@@ -1,6 +1,29 @@
 import React, { Component } from "react";
 
 export default class SignUp extends Component {
+  constructor(props) {
+    super(props)
+  this.state = {
+    firstname:"",
+    lastname:"",
+    email: "",
+    password: "",
+  };
+  this.handleInputChange = this.handleInputChange.bind(this);
+  this.handleSubmit = this.handleSubmit.bind(this);
+};
+  handleInputChange(event) {
+    const target = event.target.name;
+    console.log(event.target.value)
+    this.setState({
+      [target]: event.target.value
+    })
+  };
+  handleSubmit(event) {
+    console.log("clicked");
+    alert('submitted: ' + event.target.value);
+    event.preventDefault();
+  }
   render() {
     return (
       <form>
