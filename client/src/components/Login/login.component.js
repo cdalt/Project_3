@@ -2,35 +2,35 @@ import React, { Component } from "react";
 
 export default class Login extends Component {
   constructor(props) {
-    super(props)
-  this.state = {
-    email: "",
-    password: "",
-    checkbox: false,
-  };
-  handleInputChange = (event) => {
-    console.log(event);
-    const target = event.target;
-    const value = target.type === "checkbox" ? target.checked : target.value;
-    const name = target.name;
+    super(props);
+    this.state = {
+      email: "",
+      password: "",
+      checkbox: false,
+    };
+    handleInputChange = (event) => {
+      console.log(event);
+      const target = event.target;
+      const value = target.type === "checkbox" ? target.checked : target.value;
+      const name = target.name;
 
-    this.setState({
-      [name]: value,
-    });
-  };
-  this.handleInputChange = this.handleInputChange.bind(this);
-  this.handleSubmit = this.handleSubmit.bind(this);
-};
+      this.setState({
+        [name]: value,
+      });
+    };
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
   handleInputChange(event) {
     const target = event.target.name;
-    console.log(event.target.value)
+    console.log(event.target.value);
     this.setState({
-      [target]: event.target.value
-    })
-  };
+      [target]: event.target.value,
+    });
+  }
   handleSubmit(event) {
     console.log("clicked");
-    alert('submitted: ' + event.target.value);
+    alert("submitted: " + event.target.value);
     event.preventDefault();
   }
   render() {
@@ -92,11 +92,6 @@ export default class Login extends Component {
           Forgot <a href="#">password?</a>
         </p>
       </form>
-<<<<<<< HEAD
     );
   }
 }
-=======
-    )}}
-
->>>>>>> cfc73d1a1ad6be5a5a4c3aee2baabadf4bd94f27
