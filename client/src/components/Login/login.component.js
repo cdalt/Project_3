@@ -92,6 +92,11 @@ export default class Login extends Component {
           Forgot <a href="#">password?</a>
         </p>
       </form>
+<<<<<<< HEAD
     );
   }
 }
+=======
+    )}}
+
+>>>>>>> cfc73d1a1ad6be5a5a4c3aee2baabadf4bd94f27
