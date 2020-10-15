@@ -6,8 +6,9 @@ function Home() {
         
       <h1>hello world</h1>   
   
+      
 
-     
+     class="row">
       <div class="column">
         <h2>Search Parameters</h2>
 
