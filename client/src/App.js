@@ -8,8 +8,12 @@ import Login from "./components/Login/login.component";
 import SignUp from "./components/SignUp/signup.component";
 
 function App() {
+<<<<<<< HEAD
   return (
     <Router>
+=======
+  return (<Router>
+>>>>>>> 462f825d1159289b39824c1728753fda268dea28
       <Navbar bg="primary" variant="dark">
         <Link className="navbar-brand" to={"/sign-in"}>
           Petfinder

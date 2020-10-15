@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 
 export default class Login extends Component {
-  state = {
+  constructor(props) {
+    super(props)
+  this.state = {
     email: "",
     password: "",
     checkbox: false,
@@ -16,9 +18,19 @@ export default class Login extends Component {
       [name]: value,
     });
   };
-
+  this.handleInputChange = this.handleInputChange.bind(this);
+  this.handleSubmit = this.handleSubmit.bind(this);
+};
+  handleInputChange(event) {
+    const target = event.target.name;
+    console.log(event.target.value)
+    this.setState({
+      [target]: event.target.value
+    })
+  };
   handleSubmit(event) {
     console.log("clicked");
+    alert('submitted: ' + event.target.value);
     event.preventDefault();
   }
   render() {
@@ -32,7 +44,9 @@ export default class Login extends Component {
             onChange={this.handleInputChange}
             name="email"
             value={this.state.email}
+            onChange={this.handleInputChange}
             type="email"
+            name="email"
             className="form-control"
             placeholder="Enter email"
           />
@@ -44,7 +58,9 @@ export default class Login extends Component {
             onChange={this.handleInputChange}
             name="password"
             value={this.state.password}
+            onChange={this.handleInputChange}
             type="password"
+            name="password"
             className="form-control"
             placeholder="Enter password"
           />
