@@ -2,10 +2,7 @@ var express = require("express");
 var session = require("express-session");
 const mongoose = require("mongoose");
 const routes = require("./routes");
-var petfinder = require("petfinder")(
-  "dopxNWoL1qIkAqCzoXTOzZArtktlomUQ1xvzT4NYCby1iFprex",
-  "UHkUItDczoXrrwvZtZTNvmpWYMqs9iKjBDcg7JYV"
-);
+// import app
 
 var PORT = process.env.PORT || 8080;
 var db = require("./models");
