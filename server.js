@@ -2,10 +2,7 @@ var express = require("express");
 var session = require("express-session");
 const mongoose = require("mongoose");
 const routes = require("./routes");
-<<<<<<< HEAD
-=======
 // import app
->>>>>>> cfc73d1a1ad6be5a5a4c3aee2baabadf4bd94f27
 
 var PORT = process.env.PORT || 8080;
 var db = require("./models");
