@@ -4,6 +4,17 @@ export default class Login extends Component {
   state = {
     email: "",
     password: "",
+    checkbox: false,
+  };
+  handleInputChange = (event) => {
+    console.log(event);
+    const target = event.target;
+    const value = target.type === "checkbox" ? target.checked : target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value,
+    });
   };
 
   handleSubmit(event) {
@@ -18,6 +29,8 @@ export default class Login extends Component {
         <div className="form-group">
           <label>Email address</label>
           <input
+            onChange={this.handleInputChange}
+            name="email"
             value={this.state.email}
             type="email"
             className="form-control"
@@ -28,6 +41,8 @@ export default class Login extends Component {
         <div className="form-group">
           <label>Password</label>
           <input
+            onChange={this.handleInputChange}
+            name="password"
             value={this.state.password}
             type="password"
             className="form-control"
@@ -38,6 +53,8 @@ export default class Login extends Component {
         <div className="form-group">
           <div className="custom-control custom-checkbox">
             <input
+              onChange={this.handleInputChange}
+              name="checkbox"
               type="checkbox"
               className="custom-control-input"
               id="customCheck1"
@@ -59,5 +76,6 @@ export default class Login extends Component {
           Forgot <a href="#">password?</a>
         </p>
       </form>
-    )}
-    ;
+    );
+  }
+}
