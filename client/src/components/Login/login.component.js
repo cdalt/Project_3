@@ -6,21 +6,18 @@ export default class Login extends Component {
     this.state = {
       email: "",
       password: "",
-      checkbox: false,
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleInputChange = (event) => {
-    console.log(event);
-    const target = event.target;
-    const value = target.type === "checkbox" ? target.checked : target.value;
-    const name = target.name;
+  handleInputChange(event) {
+    const target = event.target.name;
+    console.log(event.target.value);
 
     this.setState({
-      [name]: value,
+      [target]: event.target.value,
     });
-  };
+  }
   handleSubmit(event) {
     console.log("clicked");
     alert("submitted: " + event.target.value);
@@ -33,11 +30,12 @@ export default class Login extends Component {
 
         <div className="form-group">
           <label>Email address</label>
+
           <input
-            onChange={this.handleInputChange}
-            name="email"
             value={this.state.email}
+            onChange={this.handleInputChange}
             type="email"
+            name="email"
             className="form-control"
             placeholder="Enter email"
           />
@@ -46,10 +44,10 @@ export default class Login extends Component {
         <div className="form-group">
           <label>Password</label>
           <input
-            onChange={this.handleInputChange}
-            name="password"
             value={this.state.password}
+            onChange={this.handleInputChange}
             type="password"
+            name="password"
             className="form-control"
             placeholder="Enter password"
           />
@@ -58,8 +56,6 @@ export default class Login extends Component {
         <div className="form-group">
           <div className="custom-control custom-checkbox">
             <input
-              onChange={this.handleInputChange}
-              name="checkbox"
               type="checkbox"
               className="custom-control-input"
               id="customCheck1"
