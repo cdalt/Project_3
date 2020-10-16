@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar } from "react-bootstrap";
+
 import Home from "./pages/home";
 import About from "./pages/about";
-
 import Login from './pages/login'
 import Signup from './pages/signin'
 
@@ -63,5 +63,3 @@ function App() {
   );
 }
 export default App;
-
-//lines 9 and 10
