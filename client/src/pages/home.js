@@ -33,11 +33,18 @@ function Home() {
         <h2 className="title">Pet Name</h2>
         <div class="card-group">
           <div class="card" id="petCard1" style={{ width: "18rem" }}>
-            <img src="..." class="card-img-top" id="petImage1" alt="..."></img>
+            <img
+              src="http://placekitten.com/150/300"
+              class="card-img-top"
+              id="petImage1"
+              alt="..."
+            ></img>
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title" id="animalName1">
+                Animal Name here
+              </h5>
               <p class="card-text" id="petInfo1">
-              <p id="animalInfo1">Info on typeOfAnimal</p>
+                <p id="animalInfo1">Info on typeOfAnimal</p>
                 <p id="breedInfo1">Info on the breed of animal</p>
                 <p id="sizeInfo1">info on the size of the animal</p>
                 <p id="locationInfo1">
@@ -51,11 +58,18 @@ function Home() {
             </div>
           </div>
           <div class="card" id="petCard2" style={{ width: "18rem" }}>
-            <img src="..." class="card-img-top" id="petImage2" alt="..."></img>
+            <img
+              src="http://placekitten.com/200/300"
+              class="card-img-top"
+              id="petImage2"
+              alt="..."
+            ></img>
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title" id="animalName2">
+                Animal Name here
+              </h5>
               <p class="card-text" id="petInfo2">
-              <p id="animalInfo2">Info on typeOfAnimal</p>
+                <p id="animalInfo2">Info on typeOfAnimal</p>
                 <p id="breedInfo2">Info on the breed of animal</p>
                 <p id="sizeInfo2">info on the size of the animal</p>
                 <p id="locationInfo2">
@@ -69,9 +83,16 @@ function Home() {
             </div>
           </div>
           <div class="card" id="petCard3" style={{ width: "18rem" }}>
-            <img src="..." class="card-img-top" id="petImage3" alt="..."></img>
+            <img
+              src="http://placekitten.com/250/300"
+              class="card-img-top"
+              id="petImage3"
+              alt="..."
+            ></img>
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title" id="animalName3">
+                Animal Name here
+              </h5>
               <p class="card-text" id="petInfo3">
                 <p id="animalInfo3">Info on typeOfAnimal</p>
                 <p id="breedInfo3">Info on the breed of animal</p>
@@ -87,13 +108,6 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
-      <div class="column">
-        <h2 className="title">Mulitiple Pet Info</h2>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-        nemo nulla dolorum neque tenetur? Deleniti minus quia necessitatibus,
-        ullam saepe autem, ad veritatis accusantium laudantium officiis
-        inventore, pariatur animi. Animi.
       </div>
     </div>
   );
