@@ -16,7 +16,7 @@ export default class Login extends Component {
     console.log(event.target.value);
 
     this.setState({
-      [name]: value,
+      [target]: event.target.value,
     });
   };
   handleSubmit(event) {
