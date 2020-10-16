@@ -11,6 +11,11 @@ import Login from "./components/Login/login.component";
 import SignUp from "./components/SignUp/signup.component";
       
 
+import Home from "./pages/home";
+import About from "./pages/about";
+// import Login from "./pages/login";
+// import Signup from "./pages/signin";
+
 function App() {
   return (
     <Router>
