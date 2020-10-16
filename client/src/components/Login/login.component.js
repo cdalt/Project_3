@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 export default class Login extends Component {
   constructor(props) {
+
     super(props)
     this.state = {
       email: "",
@@ -13,13 +14,14 @@ export default class Login extends Component {
   handleInputChange(event) {
     const target = event.target.name;
     console.log(event.target.value)
+    
     this.setState({
-      [target]: event.target.value
-    })
+      [name]: value,
+    });
   };
   handleSubmit(event) {
     console.log("clicked");
-    alert('submitted: ' + event.target.value);
+    alert("submitted: " + event.target.value);
     event.preventDefault();
   }
   render() {
@@ -29,6 +31,7 @@ export default class Login extends Component {
 
         <div className="form-group">
           <label>Email address</label>
+
           <input value={this.state.email} onChange={this.handleInputChange} type="email" name="email" className="form-control" placeholder="Enter email" />
         </div>
 
