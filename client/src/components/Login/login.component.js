@@ -2,21 +2,19 @@ import React, { Component } from "react";
 
 export default class Login extends Component {
   constructor(props) {
-    super(props);
+
+    super(props)
     this.state = {
       email: "",
       password: "",
-      checkbox: false,
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-  }
-  handleInputChange = (event) => {
-    console.log(event);
-    const target = event.target;
-    const value = target.type === "checkbox" ? target.checked : target.value;
-    const name = target.name;
-
+  };
+  handleInputChange(event) {
+    const target = event.target.name;
+    console.log(event.target.value)
+    
     this.setState({
       [name]: value,
     });
@@ -33,53 +31,24 @@ export default class Login extends Component {
 
         <div className="form-group">
           <label>Email address</label>
-          <input
-            onChange={this.handleInputChange}
-            name="email"
-            value={this.state.email}
-            type="email"
-            className="form-control"
-            placeholder="Enter email"
-          />
+
+          <input value={this.state.email} onChange={this.handleInputChange} type="email" name="email" className="form-control" placeholder="Enter email" />
         </div>
 
         <div className="form-group">
           <label>Password</label>
-          <input
-            onChange={this.handleInputChange}
-            name="password"
-            value={this.state.password}
-            type="password"
-            className="form-control"
-            placeholder="Enter password"
-          />
+          <input value={this.state.password} onChange={this.handleInputChange} type="password" name="password" className="form-control" placeholder="Enter password" />
         </div>
 
         <div className="form-group">
           <div className="custom-control custom-checkbox">
-            <input
-              onChange={this.handleInputChange}
-              name="checkbox"
-              type="checkbox"
-              className="custom-control-input"
-              id="customCheck1"
-            />
-            <label className="custom-control-label" htmlFor="customCheck1">
-              Remember me
-            </label>
+            <input type="checkbox" className="custom-control-input" id="customCheck1" />
+            <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
           </div>
         </div>
 
-        <button
-          onClick={this.handleSubmit}
-          type="submit"
-          className="btn btn-primary btn-block"
-        >
-          Submit
-        </button>
-        <p className="forgot-password text-right">
-          Forgot <a href="#">password?</a>
-        </p>
+        <button onClick={this.handleSubmit} type="submit" className="btn btn-primary btn-block">Submit</button>
+        <p className="forgot-password text-right">Forgot <a href="#">password?</a></p>
       </form>
     );
   }
