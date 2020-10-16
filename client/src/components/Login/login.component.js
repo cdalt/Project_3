@@ -2,15 +2,14 @@ import React, { Component } from "react";
 
 export default class Login extends Component {
   constructor(props) {
-
-    super(props)
+    super(props);
     this.state = {
       email: "",
       password: "",
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-  };
+  }
   handleInputChange(event) {
     const target = event.target.name;
     console.log(event.target.value);
@@ -18,7 +17,7 @@ export default class Login extends Component {
     this.setState({
       [target]: event.target.value,
     });
-  };
+  }
   handleSubmit(event) {
     console.log("clicked");
     alert("submitted: " + event.target.value);
@@ -67,8 +66,16 @@ export default class Login extends Component {
           </div>
         </div>
 
-        <button onClick={this.handleSubmit} type="submit" className="btn btn-primary btn-block">Submit</button>
-        <p className="forgot-password text-right">Forgot <a href="#">password?</a></p>
+        <button
+          onClick={this.handleSubmit}
+          type="submit"
+          className="btn btn-primary btn-block"
+        >
+          Submit
+        </button>
+        <p className="forgot-password text-right">
+          Forgot <a href="#">password?</a>
+        </p>
       </form>
     );
   }

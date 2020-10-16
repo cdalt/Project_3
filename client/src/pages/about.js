@@ -22,7 +22,7 @@ function about() {
         <div className="row">
           <div className="col col-md-6">
             <p>
-              We hope you like our page, this was made by: Dalton, Alfredo,
+              We hope you like out page, this was made by: Dalton, Alfredo,
               Blake, and Jeremy.
             </p>
           </div>
