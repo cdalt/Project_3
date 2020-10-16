@@ -45,8 +45,7 @@ function App() {
       {/*seperated  */}
       <div className="container">
         <div className="row">
-          <div className="col-6"></div>
-          <div className="col-6 pt-5">
+          <div className="col-md-12">
             <div className="auth-wrapper">
               <div className="auth-inner">
                 <Switch>
@@ -65,3 +64,5 @@ function App() {
   );
 }
 export default App;
+
+//lines 9 and 10
