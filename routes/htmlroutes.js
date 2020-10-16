@@ -2,10 +2,17 @@ var router = require("express").Router();
 var passport = require("passport");
 require("../passport/config.js");
 
-router.route("/").get(function (req, res, next) {
-  console.log("Testing");
-  res.send("/");
-});
+// router
+//   .route(
+//     "/",
+//     passport.authenticate("google", {
+//       scope: ["https://www.googleapis.com/auth/userinfo.email"],
+//     })
+//   )
+//   .get(function (req, res, next) {
+//     console.log("Testing");
+//     res.send("/");
+//   });
 
 //create users
 
@@ -17,7 +24,7 @@ router.route("/").get(function (req, res, next) {
 router.get(
   "/auth/google",
   passport.authenticate("google", {
-    scope: ["https://www.googleapis.com/auth/userinfo.email"],
+    scope: ["profile", "email"],
   })
 );
 
@@ -30,7 +37,11 @@ router.get(
   "/auth/google/callback",
   passport.authenticate("google", { failureRedirect: "/login" }),
   function (req, res) {
-    res.redirect("/");
+    if (req.user) {
+      res.redirect("http://localhost:3000/home");
+    } else {
+      res.redirect("/login");
+    }
   }
 );
 module.exports = router;
