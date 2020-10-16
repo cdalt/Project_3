@@ -12,11 +12,12 @@ export default class Login extends Component {
   };
   handleInputChange(event) {
     const target = event.target.name;
-    console.log(event.target.value);
+    console.log(event.target.value)
+    
     this.setState({
-      [target]: event.target.value,
+      [name]: value,
     });
-  }
+  };
   handleSubmit(event) {
     console.log("clicked");
     alert("submitted: " + event.target.value);
