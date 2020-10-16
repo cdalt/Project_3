@@ -1,7 +1,6 @@
 var router = require("express").Router();
 var passport = require("passport");
 require("../passport/config.js");
-
 // router
 //   .route(
 //     "/",
@@ -13,9 +12,7 @@ require("../passport/config.js");
 //     console.log("Testing");
 //     res.send("/");
 //   });
-
 //create users
-
 // GET /auth/google
 //   Use passport.authenticate() as route middleware to authenticate the
 //   request.  The first step in Google authentication will involve
@@ -27,7 +24,6 @@ router.get(
     scope: ["profile", "email"],
   })
 );
-
 // GET /auth/google/callback
 //   Use passport.authenticate() as route middleware to authenticate the
 //   request.  If authentication fails, the user will be redirected back to the
@@ -45,5 +41,4 @@ router.get(
   }
 );
 module.exports = router;
-
 // create users
