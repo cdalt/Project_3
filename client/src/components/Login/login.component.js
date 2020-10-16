@@ -8,26 +8,19 @@ export default class Login extends Component {
       password: "",
       checkbox: false,
     };
-    handleInputChange = (event) => {
-      console.log(event);
-      const target = event.target;
-      const value = target.type === "checkbox" ? target.checked : target.value;
-      const name = target.name;
-
-      this.setState({
-        [name]: value,
-      });
-    };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleInputChange(event) {
-    const target = event.target.name;
-    console.log(event.target.value);
+  handleInputChange = (event) => {
+    console.log(event);
+    const target = event.target;
+    const value = target.type === "checkbox" ? target.checked : target.value;
+    const name = target.name;
+
     this.setState({
-      [target]: event.target.value,
+      [name]: value,
     });
-  }
+  };
   handleSubmit(event) {
     console.log("clicked");
     alert("submitted: " + event.target.value);
@@ -44,9 +37,7 @@ export default class Login extends Component {
             onChange={this.handleInputChange}
             name="email"
             value={this.state.email}
-            onChange={this.handleInputChange}
             type="email"
-            name="email"
             className="form-control"
             placeholder="Enter email"
           />
@@ -58,9 +49,7 @@ export default class Login extends Component {
             onChange={this.handleInputChange}
             name="password"
             value={this.state.password}
-            onChange={this.handleInputChange}
             type="password"
-            name="password"
             className="form-control"
             placeholder="Enter password"
           />

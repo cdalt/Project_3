@@ -12,9 +12,10 @@ passport.use(
     {
       clientID: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET,
-      callbackURL: "http://localhost:3000/",
+      callbackURL: "http://localhost:8080/auth/google/callback",
     },
     function (accessToken, refreshToken, profile, done) {
+      console.log("testing 1 2");
       //check user table for anyone with a facebook ID of profile.id
       User.findOne(
         {
@@ -27,10 +28,10 @@ passport.use(
           //No user was found... so create a new user with values from Facebook (all the profile. stuff)
           if (!user) {
             user = new User({
-              // name: profile.displayName,
+              googleId: profile.id,
+              firstName: profile.name.givenName,
+              lastName: profile.name.familyName,
               email: profile.emails[0].value,
-              // username: profile.username,
-              // provider: "google",
               //now in the future searching on User.findOne({'facebook.id': profile.id } will match because of this next line
               // google: profile._json,
             });
