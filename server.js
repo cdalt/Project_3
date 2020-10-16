@@ -6,9 +6,6 @@ const routes = require("./routes");
 
 var PORT = process.env.PORT || 8080;
 var db = require("./models");
-petfinder.getBreedList("cat", function (err, breeds) {
-  console.log(breeds);
-});
 var app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -20,6 +17,7 @@ app.get("/home", function (req, res) {
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/petfinder", {
   useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
 
 app.listen(PORT, function () {

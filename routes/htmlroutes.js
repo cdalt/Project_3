@@ -4,7 +4,7 @@ require("../passport/config.js");
 
 router.route("/").get(function (req, res, next) {
   console.log("Testing");
-  res.send("Hello World");
+  res.send("/");
 });
 
 //create users
