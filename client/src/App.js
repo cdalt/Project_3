@@ -2,14 +2,14 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar } from "react-bootstrap";
+import Login from "./components/Login/login.component";
+import SignUp from "./components/SignUp/signup.component";
 
 import Home from "./pages/home";
 import About from "./pages/about";
-// import Login from './pages/login'
-// import Signup from './pages/signin'
-import Login from "./components/Login/login.component";
-import SignUp from "./components/SignUp/signup.component";
-      
+// import Login from "./pages/login";
+// import Signup from "./pages/signin";
+
 function App() {
   return (
     <Router>
