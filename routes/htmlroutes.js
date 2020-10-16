@@ -24,11 +24,7 @@ require("../passport/config.js");
 router.get(
   "/auth/google",
   passport.authenticate("google", {
-<<<<<<< HEAD
-    scope: ["https://www.googleapis.com/auth/userinfo.email"],
-=======
     scope: ["profile", "email"],
->>>>>>> 3f0dede88a6fe581d8349b3458eef2a4b0d2f445
   })
 );
 
