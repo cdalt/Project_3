@@ -1,4 +1,19 @@
 .big-div{
     background-color:#0F00FF;
+}
+.title {
+    color:white;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.search{
+    text-align: left;
+}
+.para{
+    color:white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.fredo-button{
+    flex-direction: right;
 
 }
