@@ -10,7 +10,7 @@ function Home() {
         <h1 className="title"> Search for the pet of your dreams</h1>
 
         <div class="column-md-6">
-          <h2 className="title"> Search Parameters</h2>
+          <h2 className="title search"> Search Parameters:</h2>
           <form>
             <div class="form-group col-md-4">
               <label for="typeOfAnimal"></label>
