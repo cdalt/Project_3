@@ -2,11 +2,11 @@ import React from "react";
 import { Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-import SignUp from "./components/SignUp/signup.component";
+import SignUp from "../components/SignUp/signup.component";
 
 function signin() {
   return (
-      <div>
+    <div>
       <Navbar bg="primary" variant="dark">
         <Link className="navbar-brand" to={"/sign-in"}>
           Petfinder
@@ -32,13 +32,13 @@ function signin() {
           <div className="col-6"></div>
           <div className="col-6 pt-5">
             <div className="auth-wrapper">
-              <div className="auth-inner">
-              </div>
+              <div className="auth-inner"></div>
+              <SignUp />
             </div>
           </div>
         </div>
       </div>
-      </div>
+    </div>
   );
 }
 export default signin;

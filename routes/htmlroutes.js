@@ -36,9 +36,18 @@ router.get(
     if (req.user) {
       res.redirect("http://localhost:3000/home");
     } else {
-      res.redirect("/login");
+      res.redirect("http://localhost:3000/login");
     }
   }
 );
+router.get("/auth/logout", (req, res) => {
+  req.logout();
+  res.send(req.user);
+});
+
+router.get("/signup", (req, res) => {
+  console.log("signup route reached");
+});
+
 module.exports = router;
 // create users
