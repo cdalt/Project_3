@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default class SignUp extends Component {
   constructor(props) {
@@ -23,6 +24,7 @@ export default class SignUp extends Component {
   }
   navigateHome() {
     const { history } = this.props;
+    console.log("navigateHomeClick");
     if (history) history.push("/home");
   }
   handleSubmit(event) {
@@ -41,6 +43,7 @@ export default class SignUp extends Component {
       .then((respJSON) => {
         if (respJSON.status == 200) {
           this.navigateHome();
+          this.props.history.push("/home");
         }
         console.log(respJSON);
         // redirect to the homepage once signup is complete
@@ -113,12 +116,8 @@ export default class SignUp extends Component {
         </div>
 
         <div className="form-group">
-          <button
-            onClick={this.handleSubmit}
-            type="submit"
-            className="btn btn-primary btn-block"
-          >
-            Sign Up
+          <button onClick={() => this.props.history.push("/home")}>
+            redirect
           </button>
           <p className="forgot-password text-right">
             Already registered <a href="">Login?</a>
