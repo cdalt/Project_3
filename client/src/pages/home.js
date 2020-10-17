@@ -1,17 +1,13 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import "../styles/style.css"
 function Home() {
   return (
-    <div>
+    <div className="big-div">
       <div
         className="hero text-center"
-        style={{
-          height: "50vh",
-          backgroundImage: `url(${process.env.PUBLIC_URL + "/corgi lookup.jpg"})`,
-        }}
       >
-        <h1 className="title"> hello world</h1>
+        <h1 className="title"> Search for the pet of your dreams</h1>
 
         <div class="column-md-6">
           <h2 className="title"> Search Parameters</h2>
@@ -37,11 +33,11 @@ function Home() {
           </form>
         </div>
         <div class="column-md-6">
-          <h2 className="title">Pet Name</h2>
-          <div class="card-group">
-            <div class="card" id="petCard1" style={{ width: "18rem" }}>
+          <h2 className="title">Pets will appear here in a moment..</h2>
+          <div class="card-group" >
+            <div class="card" id="petCard1" >
               <img
-                src="http://placekitten.com/150/300"
+                src="https://via.placeholder.com/150"
                 class="card-img-top"
                 id="petImage1"
                 alt="..."
@@ -64,9 +60,9 @@ function Home() {
                 </a>
               </div>
             </div>
-            <div class="card" id="petCard2" style={{ width: "18rem" }}>
+            <div class="card" id="petCard2" >
               <img
-                src="http://placekitten.com/200/300"
+                src="https://via.placeholder.com/150"
                 class="card-img-top"
                 id="petImage2"
                 alt="..."
@@ -89,9 +85,9 @@ function Home() {
                 </a>
               </div>
             </div>
-            <div class="card" id="petCard3" style={{ width: "18rem" }}>
+            <div class="card" id="petCard3" >
               <img
-                src="http://placekitten.com/250/300"
+                src="https://via.placeholder.com/150"
                 class="card-img-top"
                 id="petImage3"
                 alt="..."
