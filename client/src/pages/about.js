@@ -1,15 +1,11 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import "../styles/style.css"
 function about() {
   return (
-    <div>
+    <div className="big-div">
       <div
         className="hero text-center"
-        style={{
-          height: "50vh",
-          backgroundImage: `url(${process.env.PUBLIC_URL + "/petlogo.jpg"})`,
-        }}
       >
         <h1>About us</h1>
   
