@@ -1,6 +1,16 @@
 var router = require("express").Router();
 var passport = require("passport");
+const User = require("../models/user.js");
 require("../passport/config.js");
+const cors = require("cors");
+// const {
+//   findAll,
+//   create,
+//   update,
+//   findById,
+//   remove,
+// } = require("../controllers/petcontroller");
+const { create } = require("../controllers/user.js");
 // router
 //   .route(
 //     "/",
@@ -44,10 +54,16 @@ router.get("/auth/logout", (req, res) => {
   req.logout();
   res.send(req.user);
 });
+router.post("/signup", create);
 
-router.get("/signup", (req, res) => {
-  console.log("signup route reached");
-});
+// router.post("/signup", (req, res) => {
+//   console.log("Hello");
+//   console.log(req.body);
+//   res.send(req.body);
+// });
 
+// router.get("/test", (req, res) => {
+//   console.log("test route reached");
+// });
 module.exports = router;
 // create users

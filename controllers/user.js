@@ -10,7 +10,7 @@ module.exports = {
   create: function (req, res) {
     console.log(req.body);
     db.User.create(req.body)
-      .then((dbModel) => res.json(dbModel))
+      .then((dbModel) => res.json({ status: 200 }))
       .catch((err) => res.status(422).json(err));
   },
   update: function (req, res) {
