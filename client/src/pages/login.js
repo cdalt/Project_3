@@ -2,12 +2,11 @@ import React from "react";
 import { Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-import Login from "./components/Login/login.component";
-
+import Login from "../components/Login/login.component";
 
 function login() {
   return (
-      <div>
+    <div>
       <Navbar bg="primary" variant="dark">
         <Link className="navbar-brand" to={"/sign-in"}>
           Petfinder
@@ -34,13 +33,13 @@ function login() {
           <div className="col-6 pt-5">
             <div className="auth-wrapper">
               <div className="auth-inner">
-                  
+                <Login />
               </div>
             </div>
           </div>
         </div>
       </div>
-      </div>
+    </div>
   );
 }
 export default login;
