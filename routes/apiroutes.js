@@ -17,8 +17,10 @@ router.put("/pets/:id", update);
 router.get("/pets/:id", findById);
 router.delete("/pets/:id", remove);
 router.post("/search", (req, res) => {
-  let zipcode = req.body.location;
+  console.log(req.body);
+  let zipcode = req.body.zipcode;
   let type = req.body.type;
+  let breed = req.body.breed;
 
   const fetchAccessToken = async () => {
     const params = new URLSearchParams();
@@ -36,7 +38,7 @@ router.post("/search", (req, res) => {
     let accessToken = response.access_token;
     const fetchPets = async () => {
       const petResults = await fetch(
-        `https://api.petfinder.com/v2/animals?location=${zipcode}&type=${type}`,
+        `https://api.petfinder.com/v2/animals?location=${zipcode}&type=${type}&breed=${breed}`,
         {
           headers: {
             Authorization: `Bearer ${accessToken}`,

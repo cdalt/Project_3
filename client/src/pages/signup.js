@@ -2,9 +2,9 @@ import React from "react";
 import { Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-import Login from "../components/Login/login.component";
+import SignUp from "../components/SignUp/signup.component";
 
-function login() {
+function signin() {
   return (
     <div>
       <Navbar bg="primary" variant="dark">
@@ -32,9 +32,8 @@ function login() {
           <div className="col-6"></div>
           <div className="col-6 pt-5">
             <div className="auth-wrapper">
-              <div className="auth-inner">
-                <Login />
-              </div>
+              <div className="auth-inner"></div>
+              <SignUp />
             </div>
           </div>
         </div>
@@ -42,4 +41,4 @@ function login() {
     </div>
   );
 }
-export default login;
+export default signin;
