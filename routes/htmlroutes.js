@@ -2,8 +2,6 @@ var router = require("express").Router();
 var passport = require("passport");
 const User = require("../models/user.js");
 require("../passport/config.js");
-<<<<<<< HEAD
-=======
 // const cors = require("cors");
 // const {
 //   findAll,
@@ -13,7 +11,6 @@ require("../passport/config.js");
 //   remove,
 // } = require("../controllers/petcontroller");
 const { create } = require("../controllers/user.js");
->>>>>>> 99209dae0861f814b95662a28597d4675d0603a3
 // router
 //   .route(
 //     "/",
@@ -53,9 +50,6 @@ router.get(
     }
   }
 );
-<<<<<<< HEAD
-module.exports = router;
-=======
 router.get("/auth/logout", (req, res) => {
   req.logout();
   res.send(req.user);
@@ -75,4 +69,3 @@ router.post(
 
 module.exports = router;
 // create users
->>>>>>> 99209dae0861f814b95662a28597d4675d0603a3
