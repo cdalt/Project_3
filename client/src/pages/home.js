@@ -53,6 +53,7 @@ function Home() {
                 type="text"
                 placeholder="Type of animal"
               ></input>
+              <label for="Breed of animal"></label>
               <input
                 value={animalBreed}
                 onChange={(event) => handleInputChange(setAnimalBreed, event)}
@@ -60,20 +61,23 @@ function Home() {
                 type="text"
                 placeholder="Breed of animal"
               ></input>
+              <label for="zipcode"></label>
               <input
                 value={animalZipcode}
                 onChange={(event) => handleInputChange(setAnimalZipcode, event)}
                 class="form-control"
                 type="text"
                 placeholder="Zipcode"
-              ></input>
-              <button
+              ></input>              <button
                 onClick={handleSubmit}
                 type="submit"
                 class="btn btn-primary"
               >
                 Search
               </button>
+                <a href={{empty}} class="btn btn-primary" id="search">
+                Search
+                </a>
             </div>
           </form>
         </div>

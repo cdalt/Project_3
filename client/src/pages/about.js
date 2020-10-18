@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/style.css";
-function about() {
+function About() {
   return (
     <div className="big-div">
       <div className="hero text-center">
@@ -58,4 +58,4 @@ function about() {
     </div>
   );
 }
-export default about;
+export default About;
