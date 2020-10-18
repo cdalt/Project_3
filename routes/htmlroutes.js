@@ -1,6 +1,16 @@
 var router = require("express").Router();
 var passport = require("passport");
+const User = require("../models/user.js");
 require("../passport/config.js");
+// const cors = require("cors");
+// const {
+//   findAll,
+//   create,
+//   update,
+//   findById,
+//   remove,
+// } = require("../controllers/petcontroller");
+const { create } = require("../controllers/user.js");
 // router
 //   .route(
 //     "/",
@@ -45,9 +55,17 @@ router.get("/auth/logout", (req, res) => {
   res.send(req.user);
 });
 
-router.get("/signup", (req, res) => {
+router.post("/signup", (req, res) => {
   console.log("signup route reached");
 });
+
+router.post(
+  "/login",
+  passport.authenticate("local", { failureRedirect: "/login" }),
+  function (req, res) {
+    res.redirect("/");
+  }
+);
 
 module.exports = router;
 // create users
