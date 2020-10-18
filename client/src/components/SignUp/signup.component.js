@@ -13,7 +13,6 @@ export default class SignUp extends Component {
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.navigateHome = this.navigateHome.bind(this);
   }
   handleInputChange(event) {
     const target = event.target.name;
@@ -22,13 +21,10 @@ export default class SignUp extends Component {
       [target]: event.target.value,
     });
   }
-  navigateHome() {
-    const { history } = this.props;
-    console.log("navigateHomeClick");
-    if (history) history.push("/home");
-  }
   handleSubmit(event) {
     event.preventDefault();
+    console.log("clicked");
+
     fetch("http://localhost:8080/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -41,10 +37,6 @@ export default class SignUp extends Component {
     })
       .then((resp) => resp.json())
       .then((respJSON) => {
-        if (respJSON.status == 200) {
-          this.navigateHome();
-          this.props.history.push("/home");
-        }
         console.log(respJSON);
         // redirect to the homepage once signup is complete
       });
@@ -116,8 +108,12 @@ export default class SignUp extends Component {
         </div>
 
         <div className="form-group">
-          <button onClick={() => this.props.history.push("/home")}>
-            redirect
+          <button
+            onClick={this.handleSubmit}
+            type="submit"
+            className="btn btn-primary btn-block"
+          >
+            Sign Up
           </button>
           <p className="forgot-password text-right">
             Already registered <a href="">Login?</a>
