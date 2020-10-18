@@ -15,15 +15,10 @@ function About() {
         </div>
         <div className="row">
           <div className="col col-md-6">
-<<<<<<< HEAD
-            <p>
-              We hope you like out page, this was made by: Dalton, Alfredo,
-=======
             <p className="para">
               This was a colabertaive work desgined to help people find pets that they could
               love and be with forever, we designed this with people and pets in mind. 
               We hope you like our page, this was made by: Dalton, Alfredo,
->>>>>>> 99209dae0861f814b95662a28597d4675d0603a3
               Blake, and Jeremy.
             </p>
           </div>
