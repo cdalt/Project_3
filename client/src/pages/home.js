@@ -19,16 +19,21 @@ function Home() {
                 type="text"
                 placeholder="Type of animal"
               ></input>
+              <label for="Breed of animal"></label>
               <input
                 class="form-control"
                 type="text"
                 placeholder="Breed of animal"
               ></input>
+              <label for="zipcode"></label>
               <input
                 class="form-control"
                 type="text"
                 placeholder="Zipcode"
               ></input>
+                <a href={{empty}} class="btn btn-primary" id="search">
+                Search
+                </a>
             </div>
           </form>
         </div>
