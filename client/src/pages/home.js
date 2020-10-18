@@ -1,5 +1,8 @@
 import React from "react";
 
+import './app.css';
+
+
 function Home() {
     return (
       <div>
@@ -8,7 +11,7 @@ function Home() {
   
 
      
-      <div class="column">
+      <div class="column1">
         <h2>Search Parameters</h2>
 
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias,
@@ -16,7 +19,7 @@ function Home() {
         sit quidem doloremque animi distinctio facere dicta architecto. Repellat
         sint ullam itaque possimus!
       </div>
-      <div class="column">
+      <div class="column2">
         <h2>Pet Name</h2>
 
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa dicta
@@ -24,7 +27,7 @@ function Home() {
         quibusdam recusandae consectetur qui. Dolorem quibusdam harum inventore
         soluta.
       </div>
-      <div class="column">
+      <div class="column3">
         <h2>Mulitiple Pet Info</h2>
 
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
