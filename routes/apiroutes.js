@@ -60,4 +60,3 @@ router.put("/users/:id", userControllers.update);
 
 module.exports = router;
 
-// routers to controller to get db info
