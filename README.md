@@ -1,2 +1,4 @@
-https://docs.google.com/document/d/1B1i5hVBaXo5k--eFFXVmexWW0DCMQJTzPOUN3bfQbjg/edit
-our google drive for this project
+# Find A Pet
+## Description
+A website to find pets like dogs, cats, birds and more, in your area. Uses the petfinder API to look up pets for you 
+## Link
