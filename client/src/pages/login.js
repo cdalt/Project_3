@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Picture from "../assets/pets3.jpg"
 
 import Login from "../components/Login/login.component";
 
@@ -29,7 +30,7 @@ function login() {
 
       <div className="container">
         <div className="row">
-          <div className="col-6"></div>
+          <div className="col-6"><img src={Picture}/></div>
           <div className="col-6 pt-5">
             <div className="auth-wrapper">
               <div className="auth-inner">

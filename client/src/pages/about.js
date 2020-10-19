@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/style.css";
 import { Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Picture from "../assets/corgi.jpg"
 
 function About() {
   return (
@@ -44,6 +45,8 @@ function About() {
                 love and be with forever, we designed this with people and pets in mind.
                 We hope you like our page, this was made by: Dalton Natale, Alfredo Pedroza Hernandez,
                 Blake Ehler, and Jeremy Greenfield. We hope you like our site and find a new pet.
+
+                <div className="col-6"><img src={Picture}/></div>
             </p>
             </div>
             <div className="col col-md-6">
