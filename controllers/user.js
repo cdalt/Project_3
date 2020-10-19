@@ -1,5 +1,6 @@
 const db = require("../models");
 
+
 module.exports = {
   findById: function (req, res) {
     console.log(req.params.id);
