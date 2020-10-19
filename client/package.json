@@ -2,7 +2,6 @@
   "name": "petfinder",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8080/",
   "dependencies": {
     "bootstrap": "^4.5.2",
     "http-proxy-middleware": "^1.0.6",
