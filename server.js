@@ -20,7 +20,7 @@ app.use(
   })
 );
 app.get('*', (req, res) => {
-  res.sendFile(path.join(publicPath, 'index.html'));
+  res.sendFile(path.join(req, 'index.html'));
 });
 app.use(passport.initialize());
 app.use(passport.session());
