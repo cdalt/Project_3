@@ -16,9 +16,9 @@ router.get(
   passport.authenticate("google", { failureRedirect: "/login" }),
   function (req, res) {
     if (req.user) {
-      res.redirect("https://find-a-pet-1.herokuapp.com//home");
+      res.redirect("/home");
     } else {
-      res.redirect("https://find-a-pet-1.herokuapp.com//login");
+      res.redirect("/login");
     }
   }
 );
