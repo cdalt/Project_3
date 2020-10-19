@@ -59,7 +59,7 @@ function Home() {
                   onChange={(event) => handleInputChange(setAnimalType, event)}
                   class="form-control"
                   type="text"
-                  placeholder="dog"
+                  placeholder="Animal"
                 ></input>
                 <label>Breed of Animal</label>
                 <input
@@ -67,7 +67,7 @@ function Home() {
                   onChange={(event) => handleInputChange(setAnimalBreed, event)}
                   class="form-control"
                   type="text"
-                  placeholder="pug"
+                  placeholder="Breed"
                 ></input>
                 <label>Zipcode</label>
                 <input
@@ -77,7 +77,7 @@ function Home() {
                   }
                   class="form-control"
                   type="text"
-                  placeholder="20878"
+                  placeholder="Zip Code"
                 ></input>
               </div>
               <p class="lead">
