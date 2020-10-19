@@ -1,17 +1,29 @@
-.big-div{
-    background-color:#0F00FF;
+.home-page {
+  background-color: white;
+}
+
+.card-img-top {
+  height: 400px;
+  object-fit: cover;
+}
+
+body {
+  background-color: #e9ecef;
+  /* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;*/
 }
 .title {
-    color:white;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  color: black;
 }
-.search{
-    text-align: left;
+.search {
+  text-align: left;
 }
-.para{
-    color:white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+.para {
+  color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.fredo-button {
+  flex-direction: right;
 }
 .fredo-button{
     flex-direction: right;
