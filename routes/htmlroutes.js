@@ -12,7 +12,7 @@ router.get(
 );
 
 router.get(
-  "/auth/google/callback",
+  "https://find-a-pet-1.herokuapp.com/auth/google/callback",
   passport.authenticate("google", { failureRedirect: "/login" }),
   function (req, res) {
     if (req.user) {
