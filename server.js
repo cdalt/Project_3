@@ -41,6 +41,9 @@ passport.deserializeUser(function (id, done) {
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/petfinder", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false
+
 });
 
 const uri = "mongodb+srv://bugettrackerdb:PkANEChpRB2I1LKE@find-a-pet.wmvvx.mongodb.net/petfinder?retryWrites=true&w=majority";
