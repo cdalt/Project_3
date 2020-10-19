@@ -16,9 +16,9 @@ router.get(
   passport.authenticate("google", { failureRedirect: "/login" }),
   function (req, res) {
     if (req.user) {
-      res.redirect("http://localhost:3000/home");
+      res.redirect("https://find-a-pet-1.herokuapp.com//home");
     } else {
-      res.redirect("http://localhost:3000/login");
+      res.redirect("https://find-a-pet-1.herokuapp.com//login");
     }
   }
 );

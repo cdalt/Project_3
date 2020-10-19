@@ -18,6 +18,9 @@ app.use(
     keys: [process.env.cookieKey],
   })
 );
+app.get('*', (req, res) => {
+  res.sendFile(path.join(publicPath, 'index.html'));
+});
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(routes);
