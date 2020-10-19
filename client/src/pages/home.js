@@ -2,6 +2,9 @@ import React from "react";
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/style.css";
+import { Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 function Home() {
   const [animalType, setAnimalType] = useState("");
   const [animalBreed, setAnimalBreed] = useState("");
@@ -36,6 +39,27 @@ function Home() {
   };
 
   return (
+<div>
+    <Navbar bg="dark" variant="dark">
+    <Link className="navbar-brand" to={"/home"}>
+      Find A Pet
+    </Link>
+    <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul className="navbar-nav ml-auto">
+        <li className="nav-item">
+          <Link className="nav-link" to={"/home"}>
+            Home
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to={"/about"}>
+            About
+          </Link>
+        </li>
+      </ul>
+    </div>
+  </Navbar>
+
     <div className="container">
       <div class="jumbotron ">
         <h1 className="display-4 text-center">
@@ -59,7 +83,7 @@ function Home() {
                   onChange={(event) => handleInputChange(setAnimalType, event)}
                   class="form-control"
                   type="text"
-                  placeholder="dog"
+                  placeholder="Animal Type (Ex: dog)"
                 ></input>
                 <label>Breed of Animal</label>
                 <input
@@ -67,7 +91,7 @@ function Home() {
                   onChange={(event) => handleInputChange(setAnimalBreed, event)}
                   class="form-control"
                   type="text"
-                  placeholder="pug"
+                  placeholder="Breed (Ex: pug)"
                 ></input>
                 <label>Zipcode</label>
                 <input
@@ -77,7 +101,7 @@ function Home() {
                   }
                   class="form-control"
                   type="text"
-                  placeholder="20878"
+                  placeholder="Zipcode"
                 ></input>
               </div>
               <p class="lead">
@@ -139,6 +163,7 @@ function Home() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
