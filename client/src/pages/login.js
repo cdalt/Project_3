@@ -9,7 +9,7 @@ function login() {
     <div>
       <Navbar bg="primary" variant="dark">
         <Link className="navbar-brand" to={"/sign-in"}>
-          Petfinder
+          Find A Pet
         </Link>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul className="navbar-nav ml-auto">
