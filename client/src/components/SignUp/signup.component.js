@@ -99,7 +99,7 @@ export default class SignUp extends Component {
 
         <div className="form-group">
           <a
-            href="http://localhost:8080/auth/google"
+            href="/auth/google"
             type="google"
             className="btn btn-success btn-block"
           >
