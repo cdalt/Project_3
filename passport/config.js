@@ -9,7 +9,7 @@ passport.use(
     {
       clientID: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET,
-      callbackURL: "/auth/google/callback",
+      callbackURL: "https://find-a-pet-1.herokuapp.com/auth/google/callback",
     },
     function (accessToken, refreshToken, profile, done) {
       console.log("testing 1 2");
