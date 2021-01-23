@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 export default class SignUp extends Component {
   constructor(props) {
@@ -25,7 +23,7 @@ export default class SignUp extends Component {
     event.preventDefault();
     console.log("clicked");
 
-    fetch("http://localhost:8080/signup", {
+    fetch("/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -99,7 +97,7 @@ export default class SignUp extends Component {
 
         <div className="form-group">
           <a
-            href="http://localhost:8080/auth/google"
+            href="/auth/google"
             type="google"
             className="btn btn-success btn-block"
           >
